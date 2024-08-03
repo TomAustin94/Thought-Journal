@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="entry-container">
+    <h2 class="mb-4">Your CBT Thought Journal Entry</h2>
+    <div class="mb-3">
+        <strong>Situation:</strong>
+        <p>{{ entry.situation }}</p>
+    </div>
+    <div class="mb-3">
+        <strong>Thoughts:</strong>
+        <p>{{ entry.thoughts }}</p>
+    </div>
+    <div class="mb-3">
+        <strong>Emotions:</strong>
+        <p>{{ entry.emotions }}</p>
+    </div>
+    <div class="mb-3">
+        <strong>Evidence for Thoughts:</strong>
+        <p>{{ entry.challenge }}</p>
+    </div>
+    <div class="mb-3">
+        <strong>Evidence Against Thoughts:</strong>
+        <p>{{ entry.alternative }}</p>
+    </div>
+    <div class="mb-3">
+        <strong>Reframed Thoughts:</strong>
+        <p>{{ entry.reframe }}</p>
+    </div>
+    <div class="mb-3">
+        <strong>Outcome:</strong>
+        <p>{{ entry.outcome }}</p>
+    </div>
+    {% if saved %}
+    <div class="alert alert-success" role="alert">
+        This entry has been saved to the CSV file.
+    </div>
+    {% endif %}
+    <a href="/" class="btn btn-primary">Create Another Entry</a>
+</div>
+{% endblock %}
