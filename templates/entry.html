@@ -1,40 +1,20 @@
 {% extends "base.html" %}
+
 {% block content %}
-<div class="entry-container">
-    <h2 class="mb-4">Your CBT Thought Journal Entry</h2>
-    <div class="mb-3">
-        <strong>Situation:</strong>
-        <p>{{ entry.situation }}</p>
+    <h1 class="mb-4">Your CBT Thought Journal Entry</h1>
+    <div class="card">
+        <div class="card-body">
+            <p><strong>Situation:</strong> {{ entry.situation }}</p>
+            <p><strong>Thoughts:</strong> {{ entry.thoughts }}</p>
+            <p><strong>Emotions:</strong> {{ entry.emotions }}</p>
+            <p><strong>Evidence For:</strong> {{ entry.challenge }}</p>
+            <p><strong>Evidence Against:</strong> {{ entry.alternative }}</p>
+            <p><strong>Reframed Thoughts:</strong> {{ entry.reframe }}</p>
+            <p><strong>Outcome:</strong> {{ entry.outcome }}</p>
+            <p><strong>Initial Mood:</strong> {{ entry.initial_mood }}</p>
+            <p><strong>Final Mood:</strong> {{ entry.final_mood }}</p>
+        </div>
     </div>
-    <div class="mb-3">
-        <strong>Thoughts:</strong>
-        <p>{{ entry.thoughts }}</p>
-    </div>
-    <div class="mb-3">
-        <strong>Emotions:</strong>
-        <p>{{ entry.emotions }}</p>
-    </div>
-    <div class="mb-3">
-        <strong>Evidence for Thoughts:</strong>
-        <p>{{ entry.challenge }}</p>
-    </div>
-    <div class="mb-3">
-        <strong>Evidence Against Thoughts:</strong>
-        <p>{{ entry.alternative }}</p>
-    </div>
-    <div class="mb-3">
-        <strong>Reframed Thoughts:</strong>
-        <p>{{ entry.reframe }}</p>
-    </div>
-    <div class="mb-3">
-        <strong>Outcome:</strong>
-        <p>{{ entry.outcome }}</p>
-    </div>
-    {% if saved %}
-    <div class="alert alert-success" role="alert">
-        This entry has been saved to the CSV file.
-    </div>
-    {% endif %}
-    <a href="/" class="btn btn-primary">Create Another Entry</a>
-</div>
+    <a href="/" class="btn btn-primary mt-3">Add Another Entry</a>
+    <a href="/mood_trends" class="btn btn-secondary mt-3">View Mood Trends</a>
 {% endblock %}

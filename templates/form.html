@@ -1,43 +1,63 @@
 {% extends "base.html" %}
+
 {% block content %}
-<div class="form-container">
+    <h1 class="mb-4">CBT Thought Journal</h1>
+    <p>Fill out the form below to record your journal entry. Each field includes an example to guide you.</p>
     <form method="POST">
-        <div class="mb-3">
-            <label for="situation" class="form-label">Describe the situation:</label>
-            <textarea class="form-control" name="situation" rows="3" required></textarea>
+        <div class="form-group">
+            <label for="initial_mood">Initial Mood (1-10):</label>
+            <input type="number" class="form-control" id="initial_mood" name="initial_mood" min="1" max="10" required>
+            <small class="form-text text-muted">1 = Very low, 10 = Very high</small>
         </div>
 
-        <div class="mb-3">
-            <label for="thoughts" class="form-label">What thoughts went through your mind?</label>
-            <textarea class="form-control" name="thoughts" rows="3" required></textarea>
+        <div class="form-group">
+            <label for="situation">Situation:</label>
+            <input type="text" class="form-control" id="situation" name="situation" required>
+            <small class="form-text text-muted">Example: "Had an argument with a coworker during a team meeting."</small>
         </div>
 
-        <div class="mb-3">
-            <label for="emotions" class="form-label">What emotions did you feel?</label>
-            <input type="text" class="form-control" name="emotions" required>
+        <div class="form-group">
+            <label for="thoughts">Thoughts:</label>
+            <textarea class="form-control" id="thoughts" name="thoughts" rows="3" required></textarea>
+            <small class="form-text text-muted">Example: "Everyone thinks I'm incompetent. I'll probably get fired."</small>
         </div>
 
-        <div class="mb-3">
-            <label for="challenge" class="form-label">Evidence that supports these thoughts:</label>
-            <textarea class="form-control" name="challenge" rows="3" required></textarea>
+        <div class="form-group">
+            <label for="emotions">Emotions:</label>
+            <input type="text" class="form-control" id="emotions" name="emotions" required>
+            <small class="form-text text-muted">Example: "Anxious, embarrassed, angry"</small>
         </div>
 
-        <div class="mb-3">
-            <label for="alternative" class="form-label">Evidence against these thoughts:</label>
-            <textarea class="form-control" name="alternative" rows="3" required></textarea>
+        <div class="form-group">
+            <label for="challenge">Evidence For:</label>
+            <textarea class="form-control" id="challenge" name="challenge" rows="3" required></textarea>
+            <small class="form-text text-muted">Example: "I made a mistake in my presentation. Some colleagues disagreed with my ideas."</small>
         </div>
 
-        <div class="mb-3">
-            <label for="reframe" class="form-label">A more balanced way of looking at the situation:</label>
-            <textarea class="form-control" name="reframe" rows="3" required></textarea>
+        <div class="form-group">
+            <label for="alternative">Evidence Against:</label>
+            <textarea class="form-control" id="alternative" name="alternative" rows="3" required></textarea>
+            <small class="form-text text-muted">Example: "I've received positive feedback on other projects. Disagreements are normal in meetings."</small>
         </div>
 
-        <div class="mb-3">
-            <label for="outcome" class="form-label">How do you feel now after reframing?</label>
-            <input type="text" class="form-control" name="outcome" required>
+        <div class="form-group">
+            <label for="reframe">Reframed Thoughts:</label>
+            <textarea class="form-control" id="reframe" name="reframe" rows="3" required></textarea>
+            <small class="form-text text-muted">Example: "Making mistakes doesn't make me incompetent. I can learn from this experience and improve."</small>
+        </div>
+
+        <div class="form-group">
+            <label for="outcome">Outcome:</label>
+            <textarea class="form-control" id="outcome" name="outcome" rows="3" required></textarea>
+            <small class="form-text text-muted">Example: "I feel calmer and plan to speak with my coworker to resolve our disagreement."</small>
+        </div>
+
+        <div class="form-group">
+            <label for="final_mood">Final Mood (1-10):</label>
+            <input type="number" class="form-control" id="final_mood" name="final_mood" min="1" max="10" required>
+            <small class="form-text text-muted">1 = Very low, 10 = Very high</small>
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-</div>
 {% endblock %}
