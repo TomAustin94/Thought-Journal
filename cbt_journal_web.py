@@ -17,5 +17,5 @@ def journal():
         return render_template('entry.html', entry=entry)
     return render_template('form.html')
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#    app.run(debug=True)
