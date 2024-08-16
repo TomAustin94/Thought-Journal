@@ -1,43 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Welcome to Thought Journal</title>
-</head>
-<body>
-    <h1>Welcome to the Thought Journal</h1>
+{% extends 'base.html' %}
 
-    <h2>Discover the Power of a Thought Journal</h2>
-    <p>Welcome to the Thought Journal, a space dedicated to helping you explore your thoughts and emotions. A thought journal is a powerful tool that allows you to capture and reflect on your thoughts and feelings. By writing down your experiences, you can gain clarity, manage stress, and improve your overall mental well-being.</p>
+{% block content %}
+<div class="container mt-5">
+    <div class="jumbotron bg-white shadow-sm rounded">
+        <h1 class="display-4">Welcome to the Thought Journal</h1>
+        <p class="lead">Unlock the power of self-reflection and personal growth.</p>
+        <hr class="my-4">
+        <p>This application is a demonstration of a project intended to be hosted locally to keep your data secure. Please remember not to enter any confidential information. No information is stored by this application.</p>
+        <a class="btn btn-primary btn-lg" href="{{ url_for('form') }}" role="button">Start Your Journal</a>
+    </div>
 
-    <h3>What is a Thought Journal?</h3>
-    <p>A thought journal is a personal record where you jot down your thoughts, emotions, and experiences. It serves as a safe space for self-expression and reflection, helping you understand your mental processes better. Thought journaling can be especially useful in identifying and challenging cognitive distortions—those automatic, often negative thoughts that can impact your mood and behavior.</p>
+    <div class="card mb-4 border-0 shadow-sm rounded">
+        <div class="card-body">
+            <h3 class="card-title">What is a Thought Journal?</h3>
+            <p>A thought journal is your personal space to document thoughts, feelings, and experiences. It's a valuable tool for gaining insights into your mental processes and fostering emotional well-being.</p>
+        </div>
+    </div>
 
-    <h3>Benefits of Keeping a Thought Journal</h3>
-    <ul>
-        <li><strong>Reduce Anxiety and Stress:</strong> Writing about your thoughts can help you break away from obsessive thinking and regulate your emotions.</li>
-        <li><strong>Improve Emotional Awareness:</strong> By regularly journaling, you can enhance your perception of events and gain a deeper understanding of your emotions.</li>
-        <li><strong>Boost Mental and Physical Health:</strong> Journaling has been linked to improved mood, better psychological well-being, and even enhanced immune function.</li>
-        <li><strong>Foster Personal Growth:</strong> Reflective writing can illuminate patterns in your thoughts and behaviors, providing insights that promote personal development.</li>
-    </ul>
+    <div class="card mb-4 border-0 shadow-sm rounded">
+        <div class="card-body">
+            <h3 class="card-title">Why Keep a Thought Journal?</h3>
+            <ul class="list-group list-group-flush">
+		    <li class="list-group-item border-0"><b>Reduce Stress</b>: Writing helps clear your mind and manage anxiety.</li>
+		    <li class="list-group-item border-0"><b>Enhance Self-Awareness</b>: Gain a deeper understanding of your emotions and behaviors.</li>
+		    <li class="list-group-item border-0"><b>Boost Mental Health</b>: Journaling is linked to improved mood and psychological well-being.</li>
+		    <li class="list-group-item border-0"><b>Encourage Growth</b>: Reflect on patterns and insights to support personal development.</li>
+            </ul>
+        </div>
+    </div>
 
-    <h3>How to Get Started</h3>
-    <ol>
-        <li><strong>Set Aside Time:</strong> Dedicate a few minutes each day to write in your journal. Consistency is key to reaping the benefits.</li>
-        <li><strong>Be Honest and Open:</strong> Write freely without worrying about grammar or structure. This is your private space.</li>
-        <li><strong>Reflect and Review:</strong> Periodically review your entries to identify patterns and track your progress.</li>
-    </ol>
-
-    <p>For more information on the benefits of journaling, you can explore these resources:</p>
+    <p>Explore more about the benefits of journaling:</p>
     <ul>
         <li><a href="https://positivepsychology.com/benefits-of-journaling/" target="_blank">Positive Psychology: Benefits of Journaling</a></li>
-        <li><a href="https://www.greatlakespsychologygroup.com/self-care/the-benefits-of-keeping-a-thought-journal/" target="_blank">Great Lakes Psychology Group: Benefits of Keeping a Thought Journal</a></li>
-        <li><a href="https://www.healthline.com/health/benefits-of-journaling" target="_blank">Healthline: Benefits of Journaling</a></li>
+        <li><a href="https://www.greatlakespsychologygroup.com/self-care/the-benefits-of-keeping-a-thought-journal/" target="_blank">Great Lakes Psychology Group</a></li>
     </ul>
 
-    <p>Ready to start your journey? <a href="{{ url_for('form') }}">Go to the Form</a> and begin writing today!</p>
-
-    <p><strong>Note:</strong> This is a demonstration app for educational purposes only. Please do not input confidential information into this application.</p>
-    <p>You can check out the project on GitHub: <a href="https://github.com/TomAustin94/Thought-Journal" target="_blank">Fork/Download the Thought Journal</a></p>
-</body>
-</html>
+    <p>Check out the project on <a href="https://github.com/TomAustin94/Thought-Journal" target="_blank">Github</a></p>
+</div>
+{% endblock %}
